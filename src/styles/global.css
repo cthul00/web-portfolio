@@ -1,0 +1,52 @@
+:root {
+	--bg-color: #0d0d0d;
+	--text-color: #e0e0e0;
+	--accent-color: #00ff9f; /* Neon Green */
+	--accent-glow: 0 0 10px rgba(0, 255, 159, 0.5);
+	--font-mono: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: var(--font-mono);
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	color: var(--accent-color);
+	text-shadow: var(--accent-glow);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+a {
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	text-shadow: var(--accent-glow);
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.retro-border {
+	border: 1px solid var(--accent-color);
+	box-shadow: var(--accent-glow);
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+.terminal-header::before {
+	content: "> ";
+	color: var(--accent-color);
+}

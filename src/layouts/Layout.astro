@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<main class="container">
+			<header class="retro-border">
+				<nav>
+					<a href="/" class="terminal-header">HOME</a>
+					<span style="margin: 0 1rem; color: var(--accent-color);">|</span>
+					<a href="#projects" class="terminal-header">PROJECTS</a>
+				</nav>
+			</header>
+			<slot />
+			<footer style="margin-top: 4rem; text-align: center; font-size: 0.8rem; opacity: 0.6;">
+				<p>// PORTFOLIO_V1.0_INITIALIZED</p>
+			</footer>
+		</main>
+	</body>
+</html>
