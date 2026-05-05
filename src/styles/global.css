@@ -1,8 +1,8 @@
 :root {
 	--bg-color: #0d0d0d;
 	--text-color: #e0e0e0;
-	--accent-color: #00ff9f; /* Neon Green */
-	--accent-glow: 0 0 10px rgba(0, 255, 159, 0.5);
+	--accent-color: #ffb84d; /* Pip-Boy Amber */
+	--accent-glow: 0 0 12px rgba(255, 184, 77, 0.4);
 	--font-mono: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
 }
 
