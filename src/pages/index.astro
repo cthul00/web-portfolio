@@ -1,60 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const projects = [
-	{
-		title: "Gemini-CLI",
-		description: "An interactive CLI agent for software engineering tasks.",
-		tags: ["TypeScript", "Node.js", "AI"],
-		link: "https://github.com/google/gemini-cli"
-	},
-	{
-		title: "Project Zero",
-		description: "A secure, encrypted terminal communication protocol.",
-		tags: ["C++", "Networking", "Security"],
-		link: "#"
-	},
-	{
-		title: "Cyber-Grid",
-		description: "Real-time visualization of global data streams.",
-		tags: ["TypeScript", "D3.js", "WebSockets"],
-		link: "#"
-	},
-	{
-		title: "Neural-Link",
-		description: "A minimalist CLI for interacting with LLMs.",
-		tags: ["Python", "OpenAI", "CLI"],
-		link: "#"
-	}
+    {
+        title: "Project #1",
+        description: "An interactive CLI agent for software engineering tasks.",
+        tags: ["TypeScript", "Node.js", "AI"],
+        link: "https://github.com/google/gemini-cli",
+    },
+    {
+        title: "Project #2",
+        description: "A secure, encrypted terminal communication protocol.",
+        tags: ["C++", "Networking", "Security"],
+        link: "#",
+    },
+    {
+        title: "Project #3",
+        description: "Real-time visualization of global data streams.",
+        tags: ["TypeScript", "D3.js", "WebSockets"],
+        link: "#",
+    },
+    {
+        title: "Project #4",
+        description: "A minimalist CLI for interacting with LLMs.",
+        tags: ["Python", "OpenAI", "CLI"],
+        link: "#",
+    },
 ];
 ---
 
 <Layout title="PORTFOLIO // HOME">
-	<section class="hero" style="margin-bottom: 4rem;">
-		<h1 class="terminal-header">Identity_Verified</h1>
-		<p style="font-size: 1.2rem; margin-top: 1rem;">
-			Software Engineer & Systems Architect. <br/>
-			Building the future with tools from the past.
-		</p>
-	</section>
+    <section class="hero" style="margin-bottom: 4rem;">
+        <h1 class="terminal-header">Nathan Carr</h1>
+        <p style="font-size: 1.2rem; margin-top: 1rem;">
+            Backyard Engineer & Technology Warlock. <br />
+            Exploring the future with tools from the past.
+        </p>
+    </section>
 
-	<section id="projects">
-		<h2 class="terminal-header">Active_Projects</h2>
-		<div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;">
-			{projects.map(project => (
-				<div class="retro-border">
-					<h3 style="margin-top: 0;">{project.title}</h3>
-					<p>{project.description}</p>
-					<div style="margin: 1rem 0;">
-						{project.tags.map(tag => (
-							<span style="font-size: 0.8rem; color: var(--accent-color); margin-right: 1rem; border: 1px solid var(--accent-color); padding: 2px 6px;">
-								[{tag}]
-							</span>
-						))}
-					</div>
-					<a href={project.link} style="font-weight: bold;">[ ACCESS_DETAILS ]</a>
-				</div>
-			))}
-		</div>
-	</section>
+    <section id="projects">
+        <h2 class="terminal-header">/Projects</h2>
+        <div
+            style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;"
+        >
+            {
+                projects.map((project) => (
+                    <div class="retro-border">
+                        <h3 style="margin-top: 0;">{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div style="margin: 1rem 0;">
+                            {project.tags.map((tag) => (
+                                <span style="font-size: 0.8rem; color: var(--accent-color); margin-right: 1rem; border: 1px solid var(--accent-color); border-radius: 4px; padding: 2px 6px;">                                    [{tag}]
+                                </span>
+                            ))}
+                        </div>
+                        <a href={project.link} style="font-weight: bold;">
+                            [ ACCESS_DETAILS ]
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
 </Layout>
