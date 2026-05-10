@@ -3,27 +3,21 @@ import Layout from "../layouts/Layout.astro";
 
 const projects = [
     {
-        title: "Project #1",
-        description: "An interactive CLI agent for software engineering tasks.",
-        tags: ["TypeScript", "Node.js", "AI"],
-        link: "https://github.com/google/gemini-cli",
+        title: "homelab-net",
+        description: "Network Documentation for my Homelab network",
+        tags: ["Computer Networking", "Mermaid.js", "Documentation"],
+        link: "https://github.com/cthul00/homelab-net",
     },
     {
-        title: "Project #2",
-        description: "A secure, encrypted terminal communication protocol.",
-        tags: ["C++", "Networking", "Security"],
-        link: "#",
+        title: "os-scripts",
+        description: "My personal scripts for OS configuration & automation.",
+        tags: ["Scripting", "Automation", "Security"],
+        link: "https://github.com/cthul00/os-scripts",
     },
     {
-        title: "Project #3",
-        description: "Real-time visualization of global data streams.",
-        tags: ["TypeScript", "D3.js", "WebSockets"],
-        link: "#",
-    },
-    {
-        title: "Project #4",
-        description: "A minimalist CLI for interacting with LLMs.",
-        tags: ["Python", "OpenAI", "CLI"],
+        title: "NX-MCP",
+        description: "Nintendo Switch Homebrew MCP Server.",
+        tags: ["AI", "MCP", "Homebrew"],
         link: "#",
     },
 ];
@@ -33,7 +27,7 @@ const projects = [
     <section class="hero" style="margin-bottom: 4rem;">
         <h1 class="terminal-header">Nathan Carr</h1>
         <p style="font-size: 1.2rem; margin-top: 1rem;">
-            Backyard Engineer & Technology Warlock. <br />
+            Backyard Engineer & Tech Warlock. <br />
             Exploring the future with tools from the past.
         </p>
     </section>
@@ -50,7 +44,9 @@ const projects = [
                         <p>{project.description}</p>
                         <div style="margin: 1rem 0;">
                             {project.tags.map((tag) => (
-                                <span style="font-size: 0.8rem; color: var(--accent-color); margin-right: 1rem; border: 1px solid var(--accent-color); border-radius: 4px; padding: 2px 6px;">                                    [{tag}]
+                                <span style="font-size: 0.8rem; color: var(--accent-color); margin-right: 1rem; border: 1px solid var(--accent-color); border-radius: 4px; padding: 2px 6px;">
+                                    {" "}
+                                    [{tag}]
                                 </span>
                             ))}
                         </div>
